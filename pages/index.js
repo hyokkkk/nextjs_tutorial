@@ -13,6 +13,18 @@ export async function getStaticProps() {
   }
 }
 
+/* 
+// API route call할 때 fetch() 사용하지 말라고 하는데
+// external API는 fetch 가능하다고 함. 뭐가 다르지?
+export async function getServerSideProps() {
+  const res = await fetch('https:// .../data)
+  const data = await res.json()
+
+  return {
+    props: {},
+  }
+}
+ */
 export default function Home({allPostsData}) {
   return (
     <Layout home>
